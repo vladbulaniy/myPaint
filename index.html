@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Paint</title>
+    <style>
+        #canvas{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -400px;
+            background-color: gainsboro;
+            cursor: crosshair;
+            box-shadow: 10px 0 20px 2px rgba(221, 221, 221, 1);
+        }
+        #canvasMenu{
+            position: relative;
+            z-index:2;
+            float: right;
+            background-color: #b1b1b1;
+            border: 2px solid dimgrey;
+        }
+        #canvasMenu div{
+            margin: 5px;
+            font-size: 120%;
+            cursor: pointer;
+        }
+        #conteiner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -400px;
+            width: 800px;
+            height: 400px;
+
+        }
+#myLineThickness{
+    background-color: #e3fdff;
+}
+    </style>
+</head>
+<body>
+<div id="conteiner">
+    <div id="canvasMenu">
+        <div id="lineColor">Choose line color</div>
+        <input type="color" id="myColor">
+        <div id="lineBold">Number of line thickness</div>
+        <input size="5" id="myLineThickness">
+        <div id="canvasClear" style="float: left; margin-top: 30px; background-color: red; padding: 10px">Clear</div>
+        <div style="float: right; margin-top: 30px; background-color: green; padding: 10px"><a id="canvasSave">Save</a></div>
+    </div>
+    <canvas id="canvas" width="800px" height="400px"></canvas>
+
+</div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
